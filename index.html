@@ -1,606 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Nisha Giri – Learn, Earn & Shine ✨</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Nisha Giri – Learn, Earn & Shine ✨</title>
+<meta name="description" content="Join the Skill Seekers Community. Learn in-demand digital skills step by step with Nisha Giri.">
+<meta property="og:title" content="Nisha Giri – Skill Seekers Community">
+<meta property="og:description" content="From zero to online skills. Step-by-step training, mentorship and community.">
+<meta property="og:image" content="https://i.ibb.co/tpvbjn83/farzeen-mam-langing-page-pic.jpg">
+<meta name="theme-color" content="#2E5E99">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 
-    <!-- SEO -->
-    <meta name="description" content="Join 10K+ people learning in-demand skills and earning ₹50K-₹1L monthly. Start today!">
-    <meta property="og:image" content="https://i.ibb.co/tpvbjn83/farzeen-mam-langing-page-pic.jpg">
-    <meta name="theme-color" content="#2E5E99">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-    <!-- Meta Pixel -->
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-        (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init','908482295567136
-'); fbq('track','PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=908482295567136&ev=PageView&noscript=1"/></noscript>
-
-    <style>
-        /* ===== NEW COLOR THEME ===== */
-        :root {
-            --lightest: #E7F0FA;   /* page background */
-            --light:    #7BA4D0;   /* cards, borders */
-            --primary:  #2E5E99;   /* buttons, accents */
-            --darkest:  #0D2440;   /* text on light */
-            --white:    #FFFFFF;
-            --shadow: 0 6px 20px rgba(46,94,153,.15);
-            --shadow-hover: 0 10px 30px rgba(46,94,153,.25);
-            --glow: 0 0 25px rgba(123,164,208,.5);
-            --glow-intense: 0 0 40px rgba(123,164,208,.7);
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--lightest);
-            color: var(--darkest);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Light Effects */
-        @keyframes pulseGlow {
-            0%,100%{box-shadow:0 0 20px rgba(123,164,208,.4);}
-            50%{box-shadow:0 0 40px rgba(123,164,208,.8);}
-        }
-        .glow-pulse { animation: pulseGlow 2.5s infinite; }
-
-        @keyframes shimmer {
-            0%{background-position:-200% 0;}100%{background-position:200% 0;}
-        }
-        .shine-effect{position:relative;overflow:hidden;}
-        .shine-effect::before{
-            content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;
-            background:linear-gradient(45deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);
-            background-size:200% 100%;animation:shimmer 3s infinite linear;transform:rotate(30deg);opacity:0;transition:opacity .3s;
-        }
-        .shine-effect:hover::before{opacity:1;}
-
-        /* Pure-white stats card */
-        .stats-white{
-            background:var(--white)!important;
-            color:var(--darkest)!important;
-            border:1px solid var(--light);
-        }
-
-        .glow-border{
-            border:2px solid transparent;
-            background:linear-gradient(var(--white),var(--white)) padding-box,
-                       linear-gradient(135deg,var(--primary),var(--light)) border-box;
-            transition:all .4s;
-        }
-        .glow-border:hover{box-shadow:0 0 25px rgba(46,94,153,.4);transform:translateY(-3px);}
-
-        .wa-btn{
-            background:linear-gradient(135deg,var(--primary),var(--light));
-            color:var(--white);
-            padding:.85rem 1.8rem;border-radius:50px;font-weight:800;border:none;
-            display:inline-flex;align-items:center;gap:.5rem;
-            box-shadow:0 8px 20px rgba(46,94,153,.3);
-            cursor:pointer;transition:all .3s;text-decoration:none;font-size:1rem;white-space:nowrap;
-            position:relative;overflow:hidden;
-        }
-        .wa-btn:hover{
-            transform:translateY(-3px) scale(1.03);
-            box-shadow:var(--glow-intense),0 15px 30px rgba(46,94,153,.4);
-        }
-        .wa-btn:active{transform:translateY(0) scale(.98);}
-
-        section{padding:50px 0;position:relative;}
-        .hero-section{
-            background: linear-gradient(135deg, var(--lightest), var(--light));
-            padding:70px 0 50px;overflow:hidden;
-        }
-        .badge-custom{
-            background:linear-gradient(135deg,var(--light),var(--primary));
-            color:var(--white);padding:.6rem 1.5rem;border-radius:50px;font-weight:700;font-size:.875rem;
-            display:inline-block;margin-bottom:1rem;box-shadow:var(--shadow);
-        }
-        .gradient-text{
-            background:linear-gradient(135deg,var(--primary),var(--darkest));
-            -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-            font-weight:800;font-family:'Playfair Display',serif;
-        }
-        .hero-text-compact{max-width:600px;margin:0 auto 1.5rem;font-size:1.125rem;line-height:1.4;color:var(--darkest);}
-        .stat-card{
-            background: var(--white); padding:1.25rem;border-radius:12px;box-shadow:var(--shadow);
-            text-align:center;transition:all .3s;height:100%;
-        }
-        .stat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);}
-        .counter{font-size:2rem;font-weight:800;color:var(--primary);}
-
-        /* Feedback carousel */
-        .feedback-viewport{overflow:hidden;margin:1.5rem 0;}
-        .feedback-track{display:flex;gap:15px;width:max-content;animation:scrollLeft 30s linear infinite;}
-        .feedback-track:hover{animation-play-state:paused;}
-        @keyframes scrollLeft{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-        .feedback-item{flex-shrink:0;width:300px;height:auto;border-radius:15px;overflow:hidden;box-shadow:var(--shadow);background:#000;}
-        .feedback-item img{width:100%;height:auto;display:block;}
-
-        .step-card{background: var(--white); border-radius:15px;padding:1.5rem;box-shadow:var(--shadow);transition:all .4s;height:100%;}
-        .step-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);}
-        .step-number{width:50px;height:50px;background:linear-gradient(135deg,var(--primary),var(--light));color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;flex-shrink:0;}
-
-        .accordion-item{border:none;border-radius:10px !important;margin-bottom:.75rem;box-shadow:var(--shadow);}
-        .accordion-button{background: var(--white); color:var(--darkest);font-weight:600;padding:1rem;}
-        .accordion-button:not(.collapsed){background:linear-gradient(135deg,var(--lightest),var(--white));color:var(--primary);}
-        .accordion-body{color:var(--darkest);}
-
-        /* Modal backdrops */
-        .form-backdrop,.privacy-modal{position:fixed;inset:0;background:rgba(13,36,64,.8);backdrop-filter:blur(8px);z-index:9999;opacity:0;visibility:hidden;transition:all .4s;}
-        .form-backdrop.show,.privacy-modal.show{opacity:1;visibility:visible;}
-        #formContainer,#privacyContent{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:10000;max-width:500px;width:90%;max-height:85vh;opacity:0;visibility:hidden;transition:all .4s;background:var(--white);border:1px solid var(--primary);border-radius:15px;box-shadow:var(--glow-intense);}
-        #formContainer.show,#privacyContent.show{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1);}
-        .form-card{box-shadow:0 0 40px rgba(46,94,153,.3);border:1px solid var(--primary);}
-        .form-control,.form-select{background: var(--lightest); border:2px solid var(--light);color:var(--darkest);border-radius:8px;padding:.6rem .9rem;transition:all .3s;}
-        .form-control:focus,.form-select:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(46,94,153,.15);}
-
-        /* ===== NEW CENTRED PP MODAL (CLEAN) ===== */
-        .pp-overlay-new{position:fixed;inset:0;background:rgba(13,36,64,.75);backdrop-filter:blur(4px);z-index:10001;opacity:0;visibility:hidden;transition:opacity .3s ease}
-        .pp-overlay-new.show{opacity:1;visibility:visible}
-        .pp-modal-new{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.95);width:90%;max-width:560px;max-height:86vh;background:#fff;border-radius:16px;box-shadow:0 20px 40px rgba(46,94,153,.25);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:all .3s ease}
-        .pp-overlay-new.show .pp-modal-new{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
-        .pp-header-new{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid #e7f0fa;flex-shrink:0}
-        .pp-title-new{font-size:1.25rem;font-weight:700;color:#2e5e99}
-        .pp-close-new{background:none;border:none;font-size:1.5rem;color:#7ba4d0;cursor:pointer;transition:color .2s}
-        .pp-close-new:hover{color:#2e5e99}
-        .pp-body-new{padding:1.5rem;overflow-y:auto;font-size:.95rem;line-height:1.6}
-        .pp-body-new h3{font-size:1rem;font-weight:600;margin:1rem 0 .5rem;color:#2e5e99}
-        .pp-body-new h3:first-child{margin-top:0}
-        .pp-body-new p{margin-bottom:.75rem}
-        .pp-footer-new{margin-top:1rem;font-size:.85rem;font-weight:600;text-align:center;color:#2e5e99}
-        @media (max-width:600px){
-            .pp-modal-new{width:92%;border-radius:12px}
-            .pp-header-new{padding:1rem}
-            .pp-body-new{padding:1rem}
-        }
-
-        @media(max-width:768px){
-            section{padding:40px 0;}
-            .hero-section{padding:50px 0 30px;}
-            .feedback-item{width:260px;}
-            .counter{font-size:1.6rem;}
-            .wa-btn{width:100%;justify-content:center;}
-            h1.display-3{font-size:2rem;}
-            h2.display-5{font-size:1.5rem;}
-        }
-        @media(prefers-reduced-motion:reduce){
-            *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
-            .shine-effect::before,.feedback-track{animation:none !important;}
-        }
-    </style>
-</head>
-<body class="text-dark">
-
-<!-- FORM BACKDROP -->
-<div class="form-backdrop" id="formBackdrop"></div>
-
-<!-- ===== NEW CLEAN PP MODAL ===== -->
-<div class="pp-overlay-new" id="ppOverlayNew">
-    <div class="pp-modal-new">
-        <div class="pp-header-new">
-            <div class="pp-title-new">Privacy Policy</div>
-            <button class="pp-close-new" id="ppCloseNew">&times;</button>
-        </div>
-        <div class="pp-body-new">
-            <h3>Information We Collect</h3>
-            <p>We collect information you provide directly to us, such as your name, phone number, and email address when you contact us through WhatsApp or other channels.</p>
-
-            <h3>How We Use Your Information</h3>
-            <p>Your information is used solely to communicate with you about our training programs, provide customer support, and send updates about courses you've expressed interest in.</p>
-
-            <h3>Data Protection</h3>
-            <p>We implement appropriate security measures to protect your personal information. Your data is never sold or shared with third parties for marketing purposes.</p>
-
-            <h3>Your Rights</h3>
-            <p>You have the right to access, correct, or delete your personal information at any time. Contact us to exercise these rights or for any privacy-related concerns.</p>
-
-            <div class="pp-footer-new">By using our services, you agree to this privacy policy. Last updated: December 2024</div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== HERO ===== -->
-<section class="hero-section text-center">
-    <div class="container">
-        <div class="badge-custom glow-pulse">🚀 Skill Seekers Community</div>
-        <h1 class="display-3 fw-bold gradient-text mb-2 animate-fade-in">
-            Join <span class="counter" data-target="10000" data-suffix="+">0</span> People
-        </h1>
-        <p class="hero-text-compact">Rising Together • From Zero to Online Earner</p>
-    </div>
-</section>
-
-<!-- ===== ABOUT / VIDEO ===== -->
-<section class="py-5" style="background: var(--lightest);">
-    <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-lg-6">
-                <div class="wa-btn glow-pulse mb-3 d-inline-block">👇 Watch My Journey 👇</div>
-                <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-lg">
-                    <iframe src="https://www.youtube.com/embed/pzaTyCBZ16Q" allowfullscreen loading="lazy"></iframe>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="badge-custom mb-2">💫 Your Coach</div>
-                <h2 class="display-5 fw-bold mb-3">Hi, I'm Nisha Giri</h2>
-                <div class="mb-3">
-                    <p class="fs-5 d-flex align-items-center gap-2 mb-2">✅ Entrepreneur</p>
-                    <p class="fs-5 d-flex align-items-center gap-2 mb-2">💻 Freelancer</p>
-                    <p class="fs-5 d-flex align-items-center gap-2">🎯 Online-Skills Coach</p>
-                </div>
-                <div class="p-3 rounded-2 mb-3 glow-border" style="background: var(--white);">
-                    <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">🎯 My Vision:</h3>
-                    <p class="fs-5 fw-semibold mb-0">"Empower People to Empower Themselves"</p>
-                </div>
-                <button class="wa-btn mb-4 open-any shine-effect">📲 Connect on WhatsApp</button>
-                <div class="row g-3">
-                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="5" data-suffix="+">0</div><p>Years of Experience</p></div></div>
-                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="2000" data-suffix="+">0</div><p>Students Helped</p></div></div>
-                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="100000" data-prefix="₹">0</div><p>Monthly Earning</p></div></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== FEEDBACK ===== -->
-<section class="py-5" style="background: var(--white);">
-    <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-3" style="color:var(--primary);">✨ Real Success Stories</h2>
-        <p class="text-center text-muted mb-4">100% real feedback from real students</p>
-        <div class="feedback-viewport">
-            <div class="feedback-track">
-                <!-- 11 images + duplicate for loop -->
-                <div class="feedback-item"><img src="https://i.ibb.co/396gM0y2/nisha-ff-2.jpg" alt="Student 1" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/nMfsCKrL/nisha-ff-3.jpg" alt="Student 2" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/ZpZQfyXn/nisha-ff-4.jpg" alt="Student 3" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/gZzG5hgW/nisha-ff-5.jpg" alt="Student 4" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/0jwXPVfJ/nisha-ff-6.jpg" alt="Student 5" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/7xbKk16V/nisha-ff-7.jpg" alt="Student 6" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/gMgvwMH6/nisha-ff-8.jpg" alt="Student 7" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/qYxMj57h/nisha-ff-9.jpg" alt="Student 8" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/0j4SNwBv/nisha-ff-10.jpg" alt="Student 9" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/nq49L0p8/nisha-ff1.jpg" alt="Student 10" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/NgKkTXGH/nisha-ff-11.jpg" alt="Student 11" loading="lazy"></div>
-                <!-- duplicate -->
-                <div class="feedback-item"><img src="https://i.ibb.co/396gM0y2/nisha-ff-2.jpg" alt="Student 1" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/nMfsCKrL/nisha-ff-3.jpg" alt="Student 2" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/ZpZQfyXn/nisha-ff-4.jpg" alt="Student 3" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/gZzG5hgW/nisha-ff-5.jpg" alt="Student 4" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/0jwXPVfJ/nisha-ff-6.jpg" alt="Student 5" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/7xbKk16V/nisha-ff-7.jpg" alt="Student 6" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/gMgvwMH6/nisha-ff-8.jpg" alt="Student 7" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/qYxMj57h/nisha-ff-9.jpg" alt="Student 8" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/0j4SNwBv/nisha-ff-10.jpg" alt="Student 9" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/nq49L0p8/nisha-ff1.jpg" alt="Student 10" loading="lazy"></div>
-                <div class="feedback-item"><img src="https://i.ibb.co/NgKkTXGH/nisha-ff-11.jpg" alt="Student 11" loading="lazy"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== STEPS ===== -->
-<section class="py-5" style="background: var(--lightest);">
-    <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">What Happens When You Join?</h2>
-        <div class="row g-3">
-            <div class="col-md-6 col-lg-3">
-                <div class="step-card shine-effect">
-                    <div class="d-flex align-items-start gap-3">
-                        <div class="step-number">1</div>
-                        <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Instant Connection</h3>
-                            <p>Direct WhatsApp access to me</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="step-card shine-effect">
-                    <div class="d-flex align-items-start gap-3">
-                        <div class="step-number">2</div>
-                        <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Complete Access</h3>
-                            <p>Proven step-by-step training system</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="step-card shine-effect">
-                    <div class="d-flex align-items-start gap-3">
-                        <div class="step-number">3</div>
-                        <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Daily Mentorship</h3>
-                            <p>24/7 support & community access</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="step-card shine-effect">
-                    <div class="d-flex align-items-start gap-3">
-                        <div class="step-number">4</div>
-                        <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Start Earning</h3>
-                            <p>Begin from Week 1 confidently</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5"><button class="wa-btn open-any shine-effect">📲 Get Started Now</button></div>
-    </div>
-</section>
-
-<!-- ===== STATS (NOW PURE WHITE) ===== -->
-<section class="py-5" style="background: linear-gradient(135deg,var(--lightest),var(--white));">
-    <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">Know Your Coach</h2>
-        <div class="row g-3 align-items-center">
-            <div class="col-md-6">
-                <div class="stats-white d-flex align-items-center gap-3 p-3 rounded-2 mb-3 shadow-sm">
-                    <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--primary),var(--light));">⭐</div>
-                    <div>
-                        <h3 class="fw-bold mb-1 fs-2"><span class="counter" data-target="5" data-suffix="+">0</span></h3>
-                        <p>Years of Experience</p>
-                    </div>
-                </div>
-                <div class="stats-white d-flex align-items-center gap-3 p-3 rounded-2 shadow-sm">
-                    <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--light),var(--darkest));">👥</div>
-                    <div>
-                        <h3 class="fw-bold mb-1 fs-2"><span class="counter" data-target="1000" data-suffix="+">0</span></h3>
-                        <p>Entrepreneurs Reached</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 text-center">
-                <div class="stats-white p-4 rounded-3 shadow-lg glow-pulse">
-                    <h3 class="fw-bold fs-3 mb-2" style="color:var(--primary);">🔥 Now it's YOUR time</h3>
-                    <div class="row text-center">
-                        <div class="col-6">
-                            <h4 class="fw-bold fs-2 mb-0" style="color:var(--primary);">₹<span class="counter" data-target="1600000">0</span></h4>
-                            <p class="text-muted">Earned by Students</p>
-                        </div>
-                        <div class="col-6">
-                            <h4 class="fw-bold fs-2 mb-0" style="color:var(--primary);"><span class="counter" data-target="300" data-suffix="+">0</span></h4>
-                            <p class="text-muted">Earning ₹50K–₹1L</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section class="py-5" style="background: var(--white);">
-    <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">Frequently Asked Questions</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">What kind of work will I be doing?</button></h2><div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Digital skills: Website Design, Graphics, Editing, Content Creation, Monetization, etc. 100% legitimate.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Is this program legitimate & safe?</button></h2><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Genuine training. 2000+ students earning consistently. Verify credentials.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">How much time daily?</button></h2><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Just 1-2 hours daily. Flexible for everyone.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">When will I start earning?</button></h2><div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Within 1 month. Sustainable income in 1-2 months.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">Any prior experience needed?</button></h2><div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">No experience needed! Step-by-step guidance provided.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">What support after joining?</button></h2><div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Daily mentorship, 24/7 WhatsApp, weekly calls & community.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq7">Any investment required?</button></h2><div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Nominal fee covers everything. No hidden costs.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq8">Can I do this alongside job/studies?</button></h2><div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes! Designed for busy people. Learn in free time.</div></div></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== FINAL CTA ===== -->
-<section class="py-5 text-white" style="background: linear-gradient(135deg,var(--primary),var(--light));">
-    <div class="container text-center">
-        <h2 class="display-4 fw-bold mb-3">Ready to Transform Your Life?</h2>
-        <p class="fs-5 mb-4">Join thousands on their journey to financial independence</p>
-        <div class="card border-0 p-4 p-md-5 mb-4" style="background:var(--white);color:var(--darkest);">
-            <h3 class="h4 fw-bold mb-3" style="color:var(--primary);">📲 How to Start?</h3>
-            <p class="fs-5 mb-3">Simply message me on WhatsApp:</p>
-            <div class="row g-2 mb-3">
-                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>📝 Name:</strong> Full Name</div></div>
-                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>🎂 Age:</strong> Your Age</div></div>
-                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>💼 Profession:</strong> Current Status</div></div>
-            </div>
-            <p class="fs-6 fw-semibold mb-3" style="color:var(--primary);">📌 Save My Number: 9174205063</p>
-            <button class="wa-btn open-any glow-pulse" style="background:var(--white);color:var(--primary);border:1px solid var(--primary);">📲 Message on WhatsApp Now</button>
-            <div class="text-center mt-4">
-                <a href="https://www.instagram.com/idp.nisha?igsh=MTY5bDJwYTJvMWJseA==" target="_blank" class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2"><i data-lucide="instagram" width="24"></i>Follow on Instagram</a>
-            </div>
-        </div>
-        <div class="card border-0 p-3 mb-3 glow-border" style="background:rgba(255,255,255,.15);">
-            <h4 class="h5 fw-bold mb-2">⏳ Within 24 hours:</h4>
-            <div class="row text-white">
-                <div class="col-md-6"><div class="d-flex align-items-center gap-2 justify-content-center">📋 Complete Details</div></div>
-                <div class="col-md-6"><div class="d-flex align-items-center gap-2 justify-content-center">🗺 Clear Roadmap</div></div>
-            </div>
-        </div>
-        <div class="mt-4"><button class="btn btn-outline-light btn-sm" id="privacyBtn"><i data-lucide="shield-check" width="16"></i> Privacy Policy</button></div>
-        <p class="fs-6 mb-2 mt-3">🌟 Empower with skills • 🌈 Support every vision • 🚀 Dreams to direction</p>
-        <p class="fs-4 fw-bold mb-1">❤️ With Strength & Sincerity, Nisha Giri</p>
-        <p class="fs-6 opacity-90 mb-0">Powered by Adhabits</p>
-    </div>
-</section>
-
-<!-- ===== FORM POPUP ===== -->
-<div id="formContainer">
-    <div class="card form-card glow-pulse">
-        <div class="card-body p-4 position-relative">
-            <button id="closeFormBtn" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close"></button>
-            <div class="text-center mb-4">
-                <h2 class="h4 fw-bold mb-1" style="color:var(--primary);">🚀 Start Your Journey</h2>
-                <p class="text-muted small">Fill details to get started</p>
-            </div>
-            <form id="mainForm" novalidate>
-                <input type="hidden" id="sourceInfo" name="sourceInfo">
-                <div class="row g-2">
-                    <!-- NAME -->
-                    <div class="col-12">
-                        <label class="form-label d-flex align-items-center gap-2">
-                            <i data-lucide="user" style="width:16px;"></i> Full Name *
-                        </label>
-                        <input id="inp_name" type="text" class="form-control" required value="">
-                    </div>
-
-                    <!-- PHONE -->
-                    <div class="col-12">
-                        <label class="form-label d-flex align-items-center gap-2">
-                            <i data-lucide="phone" style="width:16px;"></i> Phone *
-                        </label>
-                        <input id="inp_phone" type="tel" class="form-control" required maxlength="10" value="">
-                    </div>
-
-                    <!-- AGE -->
-                    <div class="col-6">
-                        <label class="form-label d-flex align-items-center gap-2">
-                            <i data-lucide="calendar" style="width:16px;"></i> Age *
-                        </label>
-                        <input id="inp_age" type="number" class="form-control" required min="15" max="65" value="">
-                    </div>
-
-                    <!-- GENDER -->
-                    <div class="col-6">
-                        <label class="form-label d-flex align-items-center gap-2">
-                            <i data-lucide="users" style="width:16px;"></i> Gender *
-                        </label>
-                        <select id="inp_gender" class="form-select" required>
-                            <option value="female" selected>Female</option>
-                            <option value="male">Male</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <!-- PROFESSION -->
-                    <div class="col-12">
-                        <label class="form-label d-flex align-items-center gap-2">
-                            <i data-lucide="briefcase" style="width:16px;"></i> Profession *
-                        </label>
-                        <select id="inp_profession" class="form-select" required>
-                            <option selected>Student</option>
-                            <option>Housewife</option>
-                            <option>Working Professional</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-
-                    <div class="col-12">
-                        <button type="submit" class="wa-btn w-100">📲 Send to WhatsApp</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Meta Pixel Code -->
 <script>
-    lucide.createIcons();
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '908482295567136');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=908482295567136&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 
-    /* Counter animation */
-    const counters=document.querySelectorAll('.counter');
-    const counterObserver=new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting&&!entry.target.classList.contains('counted')){
-                entry.target.classList.add('counted');
-                const target=+entry.target.getAttribute('data-target');
-                const prefix=entry.target.getAttribute('data-prefix')||'';
-                const suffix=entry.target.getAttribute('data-suffix')||'';
-                let current=0;
-                const increment=Math.max(1,Math.floor(target/50));
-                const timer=setInterval(()=>{
-                    current+=increment;
-                    if(current>=target){current=target;clearInterval(timer);}
-                    entry.target.textContent=prefix+current.toLocaleString()+suffix;
-                },30);
-            }
-        });
-    },{threshold:0.3});
-    counters.forEach(c=>counterObserver.observe(c));
+<style>
+:root{
+  --lightest:#E7F0FA; --light:#7BA4D0; --primary:#2E5E99; --darkest:#0D2440; --white:#fff;
+  --grad:linear-gradient(135deg,#2E5E99,#5b8fcb);
+  --shadow:0 8px 28px rgba(46,94,153,.15); --shadow-h:0 16px 42px rgba(46,94,153,.28);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--lightest);color:var(--darkest);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.15;letter-spacing:-.02em}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0;position:relative}
+@media(max-width:640px){section{padding:52px 0}}
+.sec-title{font-size:clamp(1.7rem,4.6vw,2.7rem);font-weight:800;color:var(--primary);text-align:center;margin-bottom:12px;font-family:'Playfair Display',serif}
+.sec-sub{text-align:center;color:#58708f;margin-bottom:34px}
+.badge{display:inline-block;background:var(--grad);color:#fff;padding:9px 20px;border-radius:50px;font-weight:700;font-size:.85rem;box-shadow:var(--shadow)}
 
-    /* Form & Privacy logic */
-    const formBackdrop=document.getElementById('formBackdrop');
-    const formContainer=document.getElementById('formContainer');
-    const mainForm=document.getElementById('mainForm');
-    const sourceInfo=document.getElementById('sourceInfo');
-    const closeFormBtn=document.getElementById('closeFormBtn');
-    const ppOverlayNew=document.getElementById('ppOverlayNew');
-    const ppCloseNew=document.getElementById('ppCloseNew');
-    const privacyBtn=document.getElementById('privacyBtn');
-    const SCRIPT_URL="https://script.google.com/macros/s/AKfycbyc8_Cc-0Do-CiJ4rePqcDh8VR4x3Co05yWGR4gZYfzFMoATFCM2G_GbLJXK6rRsMHg2w/exec";
-    const WA_NUMBER_INT="918643071462";
+/* buttons */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--grad);color:#fff;border:none;border-radius:60px;padding:15px 30px;font:700 1rem 'Inter',sans-serif;cursor:pointer;text-decoration:none;box-shadow:0 10px 26px rgba(46,94,153,.35);transition:transform .35s var(--ease),box-shadow .35s}
+.btn::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:sheen 3.4s ease-in-out infinite}
+@keyframes sheen{0%,55%{left:-80%}100%{left:140%}}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 38px rgba(46,94,153,.5)}
+.btn:active{transform:scale(.97)}
+.btn.lg{padding:18px 38px;font-size:1.08rem}
+.btn.white{background:#fff;color:var(--primary);border:1px solid var(--primary);box-shadow:var(--shadow)}
+.btn.white::after{display:none}
+.pulse{animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 10px 26px rgba(46,94,153,.35)}50%{box-shadow:0 10px 46px rgba(91,143,203,.8)}}
+.rip{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);animation:rip .7s ease-out forwards;pointer-events:none}
+@keyframes rip{to{transform:scale(4);opacity:0}}
 
-    function openForm(source='site'){
-        sourceInfo.value=source;
-        formBackdrop.classList.add('show');
-        formContainer.classList.add('show');
-        document.body.style.overflow='hidden';
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(231,240,250,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(46,94,153,.12)}
+.nav-in{height:62px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;color:var(--primary)}
+nav .btn{padding:10px 22px;font-size:.88rem}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:var(--grad)}
+
+/* hero */
+.hero{position:relative;padding:116px 0 64px;text-align:center;background:radial-gradient(700px 400px at 85% 0%,rgba(123,164,208,.55),transparent 65%),radial-gradient(600px 400px at 0% 90%,rgba(123,164,208,.4),transparent 65%),var(--lightest);overflow:hidden}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.3rem,7vw,4.4rem);font-weight:800;margin:18px 0 12px;color:var(--darkest)}
+.hero h1 .counter{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.15rem;color:#3d5878;max-width:560px;margin:0 auto 26px}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;animation:drift 16s ease-in-out infinite}
+.b1{width:300px;height:300px;background:#7BA4D0;top:-80px;left:-80px}
+.b2{width:260px;height:260px;background:#a9c9ec;bottom:-60px;right:-60px;animation-delay:-8s}
+@keyframes drift{50%{transform:translate(40px,30px) scale(1.1)}}
+.hero .container{position:relative;z-index:1}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center}
+@media(max-width:900px){.about{grid-template-columns:minmax(0,1fr);gap:30px}}
+.vid{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/9;background:#0d2440;cursor:pointer;box-shadow:var(--shadow-h);border:3px solid #fff}
+.vid img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.vid:hover img{transform:scale(1.05)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.play{position:absolute;top:50%;left:50%;width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 0 rgba(255,255,255,.6);animation:ring 2s infinite}
+.play::after{content:'';border-left:22px solid var(--primary);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+@keyframes ring{70%,100%{box-shadow:0 0 0 22px rgba(255,255,255,0)}}
+.vlabel{margin-bottom:14px}
+.about h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.4vw,2.8rem);font-weight:800;margin:12px 0 16px}
+.list p{font-size:1.1rem;margin-bottom:8px;font-weight:500}
+.vision{background:#fff;border-radius:16px;padding:18px 20px;margin:18px 0 22px;border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,var(--primary),var(--light)) border-box}
+.vision h3{color:var(--primary);font-size:1.05rem;margin-bottom:4px}
+.vision p{font-size:1.15rem;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:26px}
+@media(max-width:560px){.stat .counter{font-size:1.15rem}.stat p{font-size:.7rem}}
+.stat{background:#fff;border-radius:14px;padding:16px 8px;text-align:center;box-shadow:var(--shadow);transition:.35s var(--ease)}
+.stat:hover{transform:translateY(-5px);box-shadow:var(--shadow-h)}
+.counter{font-weight:800;color:var(--primary);font-size:1.7rem;display:block}
+.stat p{font-size:.78rem;color:#58708f;font-weight:600}
+
+/* feedback marquee */
+.fb{background:#fff;overflow:hidden}
+.marq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:16px;width:max-content;animation:scrollx 60s linear infinite}
+.marq:hover .track{animation-play-state:paused}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+.fitem{flex:0 0 auto;width:270px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#eaf1fb;cursor:zoom-in;transition:transform .4s var(--ease)}
+.fitem:hover{transform:translateY(-6px)}
+.fitem img{width:100%;height:auto;min-height:220px}
+@media(max-width:640px){.fitem{width:220px}}
+.lb{position:fixed;inset:0;z-index:10000;background:rgba(5,15,35,.88);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.4s;padding:18px}
+.lb.show{opacity:1;visibility:visible}
+.lb img{max-height:90vh;border-radius:14px}
+.lb button{position:absolute;top:14px;right:20px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer}
+
+/* steps */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:960px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid4{grid-template-columns:1fr}}
+.step{background:#fff;border-radius:20px;padding:24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start;transition:.4s var(--ease)}
+.step:hover{transform:translateY(-8px);box-shadow:var(--shadow-h)}
+.num{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--grad);color:#fff;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:1.08rem;color:var(--primary);margin-bottom:4px}
+.step p{font-size:.95rem;color:#4a6382}
+.center{text-align:center;margin-top:36px}
+
+/* coach */
+.coach{background:linear-gradient(135deg,var(--lightest),#fff)}
+.coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+@media(max-width:800px){.coach-grid{grid-template-columns:1fr}}
+.white{background:#fff;border:1px solid var(--light);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.row-s{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.row-s:last-child{margin-bottom:0}
+.ic{width:62px;height:62px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.row-s .counter{font-size:1.9rem}
+.row-s p{color:#58708f;font-weight:600;font-size:.92rem}
+.big{text-align:center}
+.big h3{color:var(--primary);font-size:1.4rem;margin-bottom:14px}
+.big .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.big .counter{font-size:1.8rem}
+.big p{color:#58708f;font-size:.88rem;font-weight:600}
+
+/* faq */
+.faq-wrap{max-width:820px;margin:0 auto}
+.acc{background:#fff;border-radius:16px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;border:1px solid transparent;transition:border-color .3s}
+.acc.open{border-color:var(--light)}
+.acc button{width:100%;background:none;border:none;text-align:left;font:600 1.03rem 'Inter',sans-serif;color:var(--darkest);padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px;cursor:pointer}
+.acc.open button{color:var(--primary)}
+.pm{position:relative;width:26px;height:26px;border-radius:50%;background:var(--lightest);flex-shrink:0}
+.pm::before,.pm::after{content:'';position:absolute;top:50%;left:50%;width:11px;height:2px;background:var(--primary);transform:translate(-50%,-50%);transition:transform .4s var(--ease)}
+.pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acc.open .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.acc .b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.acc.open .b{grid-template-rows:1fr}
+.acc .b>div{overflow:hidden}
+.acc .b p{padding:0 22px 22px;color:#4a6382}
+
+/* final */
+.final{position:relative;background:linear-gradient(135deg,#2E5E99,#6a9bd2);color:#fff;text-align:center;overflow:hidden}
+.final h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,5vw,3.2rem);font-weight:800;margin-bottom:10px}
+.final>.container>p.s{font-size:1.15rem;margin-bottom:28px;opacity:.95}
+.how{background:#fff;color:var(--darkest);border-radius:24px;padding:30px 24px;max-width:760px;margin:0 auto 22px;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+.how h3{color:var(--primary);font-size:1.4rem;margin-bottom:8px}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+@media(max-width:600px){.chips{grid-template-columns:1fr}}
+.chip{background:var(--lightest);border:1px solid var(--light);border-radius:12px;padding:12px;font-size:.92rem}
+.save{color:var(--primary);font-weight:700;margin:12px 0 18px}
+.ig{display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:12px 24px;border-radius:50px;border:2px solid var(--darkest);color:var(--darkest);text-decoration:none;font-weight:600;transition:.3s}
+.ig:hover{background:var(--darkest);color:#fff}
+.in24{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:18px;padding:18px;max-width:760px;margin:0 auto 22px}
+.in24 div{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.final .ppb{background:none;border:1px solid rgba(255,255,255,.7);color:#fff;border-radius:30px;padding:8px 18px;cursor:pointer;font:600 .85rem 'Inter',sans-serif;margin-top:6px}
+.final .ppb:hover{background:rgba(255,255,255,.18)}
+.tagl{margin-top:20px;font-size:.98rem;opacity:.95}
+.sign{font-size:1.3rem;font-weight:800;margin:8px 0 4px}
+
+/* modals */
+.bd{position:fixed;inset:0;background:rgba(13,36,64,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:9998;opacity:0;visibility:hidden;transition:.35s}
+.bd.show{opacity:1;visibility:visible}
+.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-46%) scale(.94);z-index:9999;width:92%;max-width:470px;max-height:90vh;overflow-y:auto;background:#fff;border-radius:24px;padding:32px 26px;opacity:0;visibility:hidden;transition:.45s var(--ease);box-shadow:0 30px 80px rgba(13,36,64,.5)}
+.modal.show{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+.modal .x{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.8rem;color:#7BA4D0;cursor:pointer;transition:.25s}
+.modal .x:hover{color:var(--primary);transform:rotate(90deg)}
+.modal h3{font-size:1.45rem;color:var(--primary);margin-bottom:2px}
+.modal .ms{color:#58708f;font-size:.92rem;margin-bottom:20px}
+.f{margin-bottom:14px}
+.f label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px}
+.f input,.f select{width:100%;background:var(--lightest);border:2px solid #cfdff2;color:var(--darkest);border-radius:12px;padding:13px 14px;font:1rem 'Inter',sans-serif;transition:.25s}
+.f input:focus,.f select:focus{outline:none;border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px rgba(46,94,153,.15)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.err{color:#d12e4a;font-size:.78rem;margin-top:4px;display:none}
+.f.bad .err{display:block}.f.bad input,.f.bad select{border-color:#e5484d;animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.safe{text-align:center;color:#58708f;font-size:.78rem;margin-top:12px}
+.pp h4{color:var(--primary);font-size:1rem;margin:14px 0 4px}
+.pp p{font-size:.93rem;color:#33496a}
+.pp .ft{text-align:center;font-weight:700;color:var(--primary);margin-top:16px;font-size:.85rem}
+
+/* sticky */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:800;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(231,240,250,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(46,94,153,.15);display:none;transform:translateY(110%);transition:transform .45s var(--ease)}
+.sticky.show{transform:none}
+.sticky .btn{width:100%;padding:14px}
+@media(max-width:768px){.sticky{display:block}}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="container nav-in">
+  <div class="logo">Nisha Giri</div>
+  <button class="btn open-any" data-source="Navbar">📲 Join Now</button>
+</div><div class="progress" id="prog"></div></nav>
+
+<!-- HERO -->
+<header class="hero">
+  <i class="blob b1"></i><i class="blob b2"></i>
+  <div class="container">
+    <span class="badge pulse rv">🚀 Skill Seekers Community</span>
+    <h1 class="rv" style="--d:.1s">Join <span class="counter" data-target="10000" data-suffix="+">10,000+</span> People</h1>
+    <p class="rv" style="--d:.2s">Rising Together • From Zero to Online Earner</p>
+    <div class="hero-btns rv" style="--d:.3s"><button class="btn lg open-any pulse" data-source="Hero">📲 Join the Community</button></div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section>
+  <div class="container about">
+    <div class="rv">
+      <div class="vlabel"><span class="badge">👇 Watch My Journey 👇</span></div>
+      <div class="vid" id="vid" data-id="pzaTyCBZ16Q" role="button" tabindex="0" aria-label="Play video">
+        <img id="vthumb" src="https://i.ytimg.com/vi/pzaTyCBZ16Q/hqdefault.jpg" alt="Nisha Giri – My Journey" loading="lazy">
+        <div class="play"></div>
+      </div>
+    </div>
+    <div class="rv" style="--d:.15s">
+      <span class="badge">💫 Your Coach</span>
+      <h2>Hi, I'm Nisha Giri</h2>
+      <div class="list"><p>✅ Entrepreneur</p><p>💻 Freelancer</p><p>🎯 Online-Skills Coach</p></div>
+      <div class="vision"><h3>🎯 My Vision:</h3><p>"Empower People to Empower Themselves"</p></div>
+      <button class="btn open-any" data-source="About Section">📲 Connect on WhatsApp</button>
+      <div class="stats">
+        <div class="stat"><span class="counter" data-target="5" data-suffix="+">5+</span><p>Years of Experience</p></div>
+        <div class="stat"><span class="counter" data-target="2000" data-suffix="+">2,000+</span><p>Students Helped</p></div>
+        <div class="stat"><span class="counter" data-target="100000" data-prefix="₹">₹1,00,000</span><p>Monthly Earning</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+<section class="fb">
+  <div class="container rv">
+    <h2 class="sec-title">✨ Real Success Stories</h2>
+    <p class="sec-sub">Real feedback shared by students. Tap any to view.</p>
+  </div>
+  <div class="marq"><div class="track" id="track"></div></div>
+</section>
+
+<!-- STEPS -->
+<section>
+  <div class="container">
+    <h2 class="sec-title rv">What Happens When You Join?</h2>
+    <p class="sec-sub rv">Four simple steps</p>
+    <div class="grid4">
+      <div class="step rv"><div class="num">1</div><div><h3>Instant Connection</h3><p>Direct WhatsApp access to me</p></div></div>
+      <div class="step rv" style="--d:.1s"><div class="num">2</div><div><h3>Complete Access</h3><p>Proven step-by-step training system</p></div></div>
+      <div class="step rv" style="--d:.2s"><div class="num">3</div><div><h3>Daily Mentorship</h3><p>24/7 support &amp; community access</p></div></div>
+      <div class="step rv" style="--d:.3s"><div class="num">4</div><div><h3>Start Earning</h3><p>Begin from Week 1 confidently</p></div></div>
+    </div>
+    <div class="center rv"><button class="btn lg open-any" data-source="Steps Section">📲 Get Started Now</button></div>
+  </div>
+</section>
+
+<!-- COACH STATS -->
+<section class="coach">
+  <div class="container">
+    <h2 class="sec-title rv">Know Your Coach</h2>
+    <p class="sec-sub rv">Experience and a growing community</p>
+    <div class="coach-grid">
+      <div class="white rv">
+        <div class="row-s"><div class="ic">⭐</div><div><span class="counter" data-target="5" data-suffix="+">5+</span><p>Years of Experience</p></div></div>
+        <div class="row-s"><div class="ic">👥</div><div><span class="counter" data-target="1000" data-suffix="+">1,000+</span><p>Entrepreneurs Reached</p></div></div>
+      </div>
+      <div class="white big rv" style="--d:.15s">
+        <h3>🔥 Now it's YOUR time</h3>
+        <div class="two">
+          <div><span class="counter" data-target="1600000" data-prefix="₹">₹16,00,000</span><p>Earned by Students</p></div>
+          <div><span class="counter" data-target="300" data-suffix="+">300+</span><p>Earning ₹50K–₹1L</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:#fff">
+  <div class="container">
+    <h2 class="sec-title rv">Frequently Asked Questions</h2>
+    <p class="sec-sub rv">Everything you need to know</p>
+    <div class="faq-wrap rv">
+      <div class="acc open"><button>What kind of work will I be doing?<span class="pm"></span></button><div class="b"><div><p>Digital skills: Website Design, Graphics, Editing, Content Creation, Monetization, etc. 100% legitimate.</p></div></div></div>
+      <div class="acc"><button>Is this program legitimate &amp; safe?<span class="pm"></span></button><div class="b"><div><p>Genuine training. 2000+ students earning consistently. Verify credentials.</p></div></div></div>
+      <div class="acc"><button>How much time daily?<span class="pm"></span></button><div class="b"><div><p>Just 1-2 hours daily. Flexible for everyone.</p></div></div></div>
+      <div class="acc"><button>When will I start earning?<span class="pm"></span></button><div class="b"><div><p>Within 1 month. Sustainable income in 1-2 months.</p></div></div></div>
+      <div class="acc"><button>Any prior experience needed?<span class="pm"></span></button><div class="b"><div><p>No experience needed! Step-by-step guidance provided.</p></div></div></div>
+      <div class="acc"><button>What support after joining?<span class="pm"></span></button><div class="b"><div><p>Daily mentorship, 24/7 WhatsApp, weekly calls &amp; community.</p></div></div></div>
+      <div class="acc"><button>Any investment required?<span class="pm"></span></button><div class="b"><div><p>Nominal fee covers everything. No hidden costs.</p></div></div></div>
+      <div class="acc"><button>Can I do this alongside job/studies?<span class="pm"></span></button><div class="b"><div><p>Yes! Designed for busy people. Learn in free time.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="container">
+    <h2 class="rv">Ready to Transform Your Life?</h2>
+    <p class="s rv">Join thousands on their journey to financial independence</p>
+    <div class="how rv">
+      <h3>📲 How to Start?</h3>
+      <p>Simply fill the form or message me on WhatsApp with:</p>
+      <div class="chips"><div class="chip"><b>📝 Name:</b> Full Name</div><div class="chip"><b>🎂 Age:</b> Your Age</div><div class="chip"><b>💼 Profession:</b> Current Status</div></div>
+      <p class="save">📌 Save My Number: 9174205063</p>
+      <button class="btn lg open-any pulse" data-source="Final CTA">📲 Message on WhatsApp Now</button><br>
+      <a class="ig" href="https://www.instagram.com/idp.nisha?igsh=MTY5bDJwYTJvMWJseA==" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Follow on Instagram</a>
+    </div>
+    <div class="in24 rv"><b>⏳ Within 24 hours:</b><div><span>📋 Complete Details</span><span>🗺 Clear Roadmap</span></div></div>
+    <button class="ppb" id="ppBtn">🛡 Privacy Policy</button>
+    <p class="tagl">🌟 Empower with skills • 🌈 Support every vision • 🚀 Dreams to direction</p>
+    <p class="sign">❤️ With Strength &amp; Sincerity, Nisha Giri</p>
+    <p style="opacity:.85;font-size:.9rem">Powered by Adhabits</p>
+  </div>
+</section>
+
+<div class="sticky" id="sticky"><button class="btn open-any" data-source="Sticky Bar">📲 Join the Community</button></div>
+
+<div class="lb" id="lb"><button aria-label="Close">×</button><img alt="Student feedback"></div>
+
+<!-- FORM -->
+<div class="bd" id="bd"></div>
+<div class="modal" id="fm" role="dialog" aria-modal="true">
+  <button class="x" id="fx" aria-label="Close">×</button>
+  <h3>🚀 Start Your Journey</h3>
+  <p class="ms">Fill details &amp; continue on WhatsApp</p>
+  <form id="mainForm" novalidate>
+    <input type="hidden" id="sourceInfo" name="sourceInfo">
+    <div class="f"><label>👤 Full Name *</label><input id="inp_name" type="text" placeholder="Enter your full name" autocomplete="name"><div class="err">Please enter your name</div></div>
+    <div class="f"><label>📞 Phone *</label><input id="inp_phone" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit number" autocomplete="tel"><div class="err">Enter a valid 10-digit number</div></div>
+    <div class="row">
+      <div class="f"><label>🎂 Age *</label><input id="inp_age" type="number" min="15" max="65" placeholder="Your age"><div class="err">Age 15–65</div></div>
+      <div class="f"><label>👥 Gender *</label><select id="inp_gender"><option value="">Select</option><option value="female">Female</option><option value="male">Male</option><option value="other">Other</option></select><div class="err">Select one</div></div>
+    </div>
+    <div class="f"><label>💼 Profession *</label><select id="inp_profession"><option value="">Select your status</option><option>Student</option><option>Housewife</option><option>Working Professional</option><option>Other</option></select><div class="err">Select one</div></div>
+    <button type="submit" class="btn" style="width:100%">📲 Send to WhatsApp</button>
+    <p class="safe">🔒 Your details are safe with us.</p>
+  </form>
+</div>
+
+<!-- PRIVACY -->
+<div class="modal pp" id="pm" role="dialog" aria-modal="true">
+  <button class="x" id="px" aria-label="Close">×</button>
+  <h3>Privacy Policy</h3>
+  <h4>Information We Collect</h4><p>We collect information you provide directly to us, such as your name, phone number, age, gender and profession when you contact us through our form, WhatsApp or other channels.</p>
+  <h4>How We Use Your Information</h4><p>Your information is used solely to communicate with you about our training programs, provide customer support, and send updates about courses you've expressed interest in.</p>
+  <h4>Data Protection</h4><p>We implement appropriate security measures to protect your personal information. Your data is never sold or shared with third parties for marketing purposes.</p>
+  <h4>Your Rights</h4><p>You have the right to access, correct, or delete your personal information at any time. Contact us to exercise these rights or for any privacy-related concerns.</p>
+  <div class="ft">By using our services, you agree to this privacy policy.</div>
+</div>
+
+<script>
+/* ===== CONFIG (same destinations as before) ===== */
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbyc8_Cc-0Do-CiJ4rePqcDh8VR4x3Co05yWGR4gZYfzFMoATFCM2G_GbLJXK6rRsMHg2w/exec";
+const WA_NUMBER_INT="918643071462";
+const SHOTS=[
+"396gM0y2/nisha-ff-2","nMfsCKrL/nisha-ff-3","ZpZQfyXn/nisha-ff-4","gZzG5hgW/nisha-ff-5","0jwXPVfJ/nisha-ff-6","7xbKk16V/nisha-ff-7",
+"gMgvwMH6/nisha-ff-8","qYxMj57h/nisha-ff-9","0j4SNwBv/nisha-ff-10","nq49L0p8/nisha-ff1","NgKkTXGH/nisha-ff-11"
+].map(s=>"https://i.ibb.co/"+s+".jpg");
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+
+/* feedback marquee (list built twice for seamless loop) */
+const track=$('#track'),lb=$('#lb'),lbi=lb.querySelector('img');
+[...SHOTS,...SHOTS].forEach((u,i)=>{
+  const d=document.createElement('div');d.className='fitem';
+  const im=new Image();im.src=u;im.alt='Student feedback '+((i%SHOTS.length)+1);im.loading='lazy';im.referrerPolicy='no-referrer';
+  im.onerror=()=>d.remove();d.appendChild(im);
+  d.onclick=()=>{lbi.src=u;lb.classList.add('show')};track.appendChild(d);
+});
+lb.onclick=()=>lb.classList.remove('show');
+
+/* video facade */
+(function(){
+  const v=$('#vid'),id=v.dataset.id,th=$('#vthumb');
+  const chain=['hq2','hq1','hq3'];let k=0;
+  th.onerror=()=>{if(k<chain.length){th.src='https://i.ytimg.com/vi/'+id+'/'+chain[k++]+'.jpg'}};
+  const play=()=>{v.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="My Journey"></iframe>';v.onclick=null};
+  v.onclick=play;v.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();play()}};
+})();
+
+/* reveal + counters */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+const co=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;const el=e.target;co.unobserve(el);
+  const t=+el.dataset.target,p=el.dataset.prefix||'',s=el.dataset.suffix||'',t0=performance.now(),dur=1700;
+  (function f(n){const r=Math.min((n-t0)/dur,1),v=Math.round(t*(1-Math.pow(1-r,3)));el.textContent=p+v.toLocaleString('en-IN')+s;if(r<1)requestAnimationFrame(f)})(t0);
+}),{threshold:.4});
+$$('.counter').forEach(c=>co.observe(c));
+
+/* scroll: progress bar + sticky CTA */
+const prog=$('#prog'),sticky=$('#sticky');let tk=false;
+addEventListener('scroll',()=>{if(tk)return;tk=true;requestAnimationFrame(()=>{
+  const m=document.documentElement.scrollHeight-innerHeight;prog.style.width=(m>0?scrollY/m*100:0)+'%';
+  sticky.classList.toggle('show',scrollY>500);tk=false})},{passive:true});
+
+/* ripple */
+document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn');if(!b)return;
+  const r=b.getBoundingClientRect(),d=Math.max(r.width,r.height);const s=document.createElement('span');s.className='rip';
+  s.style.cssText=`width:${d}px;height:${d}px;left:${e.clientX-r.left-d/2}px;top:${e.clientY-r.top-d/2}px`;b.appendChild(s);setTimeout(()=>s.remove(),700)});
+
+/* FAQ */
+$$('.acc button').forEach(b=>b.onclick=()=>{const a=b.parentElement,was=a.classList.contains('open');$$('.acc.open').forEach(x=>x.classList.remove('open'));if(!was)a.classList.add('open')});
+
+/* modals */
+const bd=$('#bd'),fm=$('#fm'),pm=$('#pm'),mainForm=$('#mainForm'),sourceInfo=$('#sourceInfo');
+function openForm(s){sourceInfo.value=s||'Website';bd.classList.add('show');fm.classList.add('show');document.body.style.overflow='hidden'}
+function closeAll(){bd.classList.remove('show');fm.classList.remove('show');pm.classList.remove('show');lb.classList.remove('show');document.body.style.overflow=''}
+document.addEventListener('click',e=>{const t=e.target.closest('.open-any');if(t&&!t.closest('#fm')){e.preventDefault();openForm(t.dataset.source)}});
+$('#fx').onclick=closeAll;$('#px').onclick=closeAll;bd.onclick=closeAll;
+$('#ppBtn').onclick=()=>{bd.classList.add('show');pm.classList.add('show');document.body.style.overflow='hidden'};
+addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+
+/* Meta events: Contact (+ Lead) on final form submit */
+function trackLead(source){
+  try{
+    if(typeof fbq==='function'){
+      fbq('track','Contact');
+      fbq('track','Lead',{content_name:'WhatsApp Form',content_category:source});
     }
-    function closeForm(){
-        formBackdrop.classList.remove('show');
-        formContainer.classList.remove('show');
-        document.body.style.overflow='';
-        setTimeout(()=>mainForm.reset(),300);
-    }
-    function openPPNew(){
-        ppOverlayNew.classList.add('show');
-        document.body.style.overflow='hidden';
-    }
-    function closePPNew(){
-        ppOverlayNew.classList.remove('show');
-        document.body.style.overflow='';
-    }
-    formBackdrop.addEventListener('click',closeForm);
-    closeFormBtn.addEventListener('click',closeForm);
-    privacyBtn.addEventListener('click',openPPNew);
-    ppCloseNew.addEventListener('click',closePPNew);
-    ppOverlayNew.addEventListener('click',function(e){if(e.target===ppOverlayNew)closePPNew();});
-    document.addEventListener('click',(e)=>{
-        const trigger=e.target.closest('.open-any');
-        if(trigger&&!trigger.closest('#formContainer')){e.preventDefault();openForm(trigger.dataset.source||'Website');}
-    });
-    mainForm.addEventListener('submit',(e)=>{
-        e.preventDefault();
-        const name=document.getElementById('inp_name').value.trim();
-        const phone=document.getElementById('inp_phone').value.replace(/\D/g,'');
-        const age=document.getElementById('inp_age').value;
-        const gender=document.getElementById('inp_gender').value;
-        const profession=document.getElementById('inp_profession').value;
-        if(!name||phone.length<6||!age||!gender||!profession){alert('Please fill all fields correctly.');return;}
-        const formData=new FormData();
-        formData.append('name',name);formData.append('phone',phone);formData.append('age',age);formData.append('gender',gender);formData.append('profession',profession);formData.append('source',sourceInfo.value);formData.append('timestamp',new Date().toISOString());
-        fetch(SCRIPT_URL,{method:'POST',body:formData,mode:'no-cors'}).catch(()=>{});
-        const msg=encodeURIComponent(`Hello Ma'am,\n\nI am interested in your program. Here are my details:\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`);
-        if(typeof fbq!=='undefined'){fbq('track','Contact');fbq('track','Lead',{content_name:'WhatsApp Form',content_source:sourceInfo.value});}
-        window.open(`https://wa.me/${WA_NUMBER_INT}?text=${msg}`,'_blank');
-        closeForm();
-    });
-    document.addEventListener('keydown',(e)=>{
-        if(e.key==='Escape'){closeForm();closePPNew();}
-    });
+  }catch(e){}
+}
+
+/* validation */
+function bad(id,b){document.getElementById(id).closest('.f').classList.toggle('bad',b);return !b}
+
+/* submit → Google Sheet + Pixel + WhatsApp */
+mainForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=$('#inp_name').value.trim(),phone=$('#inp_phone').value.replace(/\D/g,''),age=$('#inp_age').value,
+        gender=$('#inp_gender').value,profession=$('#inp_profession').value,source=sourceInfo.value||'Website';
+  const ok=[bad('inp_name',name.length<2),bad('inp_phone',phone.length!==10),bad('inp_age',!age||age<15||age>65),
+            bad('inp_gender',!gender),bad('inp_profession',!profession)].every(Boolean);
+  if(!ok)return;
+
+  const fd=new FormData();
+  fd.append('name',name);fd.append('phone',phone);fd.append('age',age);fd.append('gender',gender);
+  fd.append('profession',profession);fd.append('source',source);fd.append('timestamp',new Date().toISOString());
+  try{fetch(SCRIPT_URL,{method:'POST',body:fd,mode:'no-cors',keepalive:true}).catch(()=>{})}catch(err){}
+
+  trackLead(source);
+
+  const msg=encodeURIComponent(`Hello Ma'am,\n\nI am interested in your program. Here are my details:\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`);
+  closeAll();setTimeout(()=>mainForm.reset(),300);
+  window.open(`https://wa.me/${WA_NUMBER_INT}?text=${msg}`,'_blank');
+});
 </script>
 </body>
 </html>
